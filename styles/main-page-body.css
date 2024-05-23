@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(170, 215, 167);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-items: center;
+}
+
+.featured-content-section {
+    display: grid;
+    background-color: darkgreen;
+    position: fixed;
+    
+    margin-top: 48px;
+    margin-left: 36%;
+    height: 800px;
+    width: 700px;
+    
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    /*
+    column-gap: 0px;
+    row-gap: 0px;
+    align-items: center;
+    */
+}
+
+.thumbnail img {
+    height: 200px;
+    width: 275px;
+    opacity: 1.0;
+}
+
+.content-block {
+    background-color: lightgrey;
+    margin-top: 30px;
+    opacity: 1.0;
+    width: 275px;
+    height: 300px;
+}
+
+.project-title {
+    
+    font-size: 50;
+    color: red;
+    background-color: red;
+}

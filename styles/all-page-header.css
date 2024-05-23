@@ -1,0 +1,74 @@
+.title h1{
+    text-align: center;
+}
+
+.toolbar {
+    background-color: grey;
+    
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.home-button {
+    margin: 0;
+    background-color: grey;
+    
+    border-color: black;
+    border-style: solid;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    right: 0;
+    cursor: pointer;
+    
+    transition-duration: 0.15s;
+    white-space: nowrap;
+}
+
+.home-button:hover {
+    background-color: rgb(145, 145, 145);
+}
+
+.projects-button {
+    margin: 0;
+    background-color: grey;
+    border-color: black;
+    border-style: solid;
+    
+    border-top: 0;
+    border-bottom: 0;
+    cursor: pointer;
+    
+    transition-duration: 0.15s;
+    white-space: nowrap;
+}
+
+.projects-button:hover {
+    background-color: rgb(145, 145, 145);
+}
+
+.contact-button {
+    margin: 0;
+    background-color: grey;
+    
+    border-color: black;
+    border-style: solid;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    right: 0;
+    cursor: pointer;
+    
+    transition-duration: 0.15s;
+    white-space: nowrap;
+}
+
+.contact-button:hover {
+    background-color: rgb(145, 145, 145);
+}
