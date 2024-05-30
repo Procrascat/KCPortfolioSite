@@ -1,0 +1,31 @@
+.project-content-block {
+    display: flex;
+    background-color: darkgreen;
+    margin-top: 100px;
+    margin: auto;
+    height: 1fr;
+    width: 900px;
+    
+}
+
+.project-content {
+    display: block;
+    padding: 50px;
+    align-content: center;
+    
+    height: 1fr;
+    width: 900px;
+}
+
+.project-thumbnail {
+    display: block;
+    justify-content: center;
+}
+
+figure img{
+    width: 500px;
+    border: 2px #111111 solid;
+}
+figcaption {
+    font-style: italic;
+}
