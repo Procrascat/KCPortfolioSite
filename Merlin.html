@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="styles/all-page-header.css">
         <link rel="stylesheet" href="styles/main-page-body.css">
         <link rel="stylesheet" href="styles/content-page.css">
-        <title>Project Name</title>
+        <title>Merlin</title>
         <div class="title">
             <h1>Khalil Clay</h1>
             
@@ -32,63 +32,70 @@
     <body>
         <div class="project-content-block">
             <div class="project-content">
-                <!--<div class="project-thumbnail">
-                    <img src="images/AE-Thumbnail.webp" alt="">
-                </div>-->
                 
-                <div class="entry-content">
+                <article>
+                    <div class="content-title">
+                        <h1>Merlin</h1>
+                    </div>
+                    
+            <p>
+                <a href="https://realworldstudio.itch.io/merlin">Merlin</a> is a top-down RPG game created by Solomon Lucas-Thornton, set in a fantasy world where the player must fight bosses and collect spells used to defeat enemies. 
+                The game was developed in Godot using GDScript.
+            </p>
+            
+            
+            
+            <h2>Bug Fixes</h2>
+            
+            
+            
+            <figure class="wp-block-video">
+                <video controls="" src="https://cdn.discordapp.com/attachments/812828834649997356/982377778945089636/Rpg_Project_DEBUG_2022-06-03_16-16-33.mp4">
 
-		
-                    <p><a href="https://www.vrtality.org/resources/vr-experiences/">Animal Excursion</a> is a VR experience worked on by a team of interns I was on with the Seattle Public Library. The VR experience was developed in Unity using C# and aimed to support teen mental health through co-designing. The three-person development team(1 lead and 2 interns) codesigned the experience with teens from the Fayette Library design this experience. This resulted in a VR experience set in a forest environment where the player can pet and feed animals. Development for this project lasted about 3 months (Nov. – Jan.) and my role in this project was to develop the AI and player interactions for the animals. </p>
-                    
-                    
-                    
-                    <h2>Animal Behavior</h2>
-                    
-                    
-                    
-                    <p>The animal AI, needed to be able to move in the game world independent of the player, while also moving to the player and stopping when triggered. To do this, I used the Unity Navmesh components for the animal’s pathfinding and scripting for its behaviors. </p>
-                    
-                    
-                    
-                    <figure><img src="images/AE-Thumbnail.webp" alt="">
-                       <figcaption> Goat Agent</figcaption>
-                    </figure>
-                    
-                    
-                    
-                    <p>The photo above shows one of the animals that are in the experience, the goat. The goat uses a game object I made that consists of a nav mesh agent component and two colliders for seeing and eating. This allowed the goat to move around its environment. C# scripts are used to activate the animal’s ability to walk.</p>
-                    
-                    
-                    
-                  
-                    
-                    <p>Animal Wandering: <a href="https://youtube.com/clip/UgkxPO8kF9MRAQro4xR1vEgr-Vq4jc9hS-ZY" rel="nofollow">Video Link</a></p>
-                    
-                    
-                    
-                    <h2>Player Interactions with Animals</h2>
-                    
-                    
-                    
-                    <p>The codesigners felt that being able to interact with animals would add to the mental health aspect of the experience. So the player needed to be able to interact with the animals consistently. This meant making interactions to allow the player to pet animals and feed them.</p>
-                    
-                    
-                    
-                    <figure><img src="images/bear-petting.webp" alt="">
-                        <figcaption>
-                            Petting Bear Agent
-                        </figcaption>
-                    </figure>
-                    
-                    
-                    
-                    <p>To give the players the feeling of interacting with animals, the animal agents have eyes and mouth colliders that allow the animal to “locate” and “eat” food. When an animal’s specified favorite food has entered the eye collider, the behavior script takes the location of the food and sets that location as a target for the food. When the food collides with the mouth collider, the animal will then remove that object from the scene because it is considered eaten. This interaction is how the player establishes ownership of the animals which leads to the following behavior described previously. </p>
-                    
-                    
-                    
-                    <p>Petting animals proved to be a challenge. While I could child/connect the animal’s head to the player’s hand, at a certain range there was still an issue of the head not returning to its normal orientation. The project’s lead suggested I use a quaternion for having the rotation change from the rotation tied to the player’s hand to the animal’s original head rotation. This made it so that the animal’s heads wouldn’t remain at an awkward angle after being petted. </p>
-                    
+                </video>
+                <figcaption class="wp-element-caption">
+                    Enemies have inconsistent attacks
+                </figcaption>
+            </figure>
+            
+            
+            
+            <p>
+                When I joined the project, I started off by fixing a bug where the enemies’ attacks on the player would stop registering after the first hit. 
+                After playtesting, I found that the enemy’s attack function was triggered only when the player’s hitbox entered its hurt box instead of every frame it was there.
+            </p>
+            
+            
+            
+            <figure class="wp-block-video">
+                <video controls="" src="https://cdn.discordapp.com/attachments/225073410667970560/1016064543677481074/Rpg_Project_DEBUG_2022-09-04_14-16-37.mp4">
+                    Gex
+                </video>
+                <figcaption class="wp-element-caption">
+                    Enemies have consistent attacks
+                </figcaption>
+            </figure>
+            
+            
+            
+            <h2 class="wp-block-heading">Cutscenes</h2>
+            
+            
+            
+            <p>
+                When I was working on the cutscene team, we needed a key NPC to appear at multiple parts of the game who would direct the player to where they should go. So I was tasked with creating the NPC object that would trigger the NPC and effects to appear. 
+                For this, I made use of the collision triggers so that when the player was close enough the character would appear with his sparkle effects.
+            </p>
+            
+            
+            
+            <figure class="wp-block-video">
+                <video controls="" src="https://cdn.discordapp.com/attachments/225073410667970560/1016070010600423464/Rpg_Project_DEBUG_2022-09-04_14-38-42.mp4">
+
+                </video>
+            </figure>
+            
+            </article>
             </div>
         </div>
     </body>

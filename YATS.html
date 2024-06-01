@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="styles/all-page-header.css">
         <link rel="stylesheet" href="styles/main-page-body.css">
         <link rel="stylesheet" href="styles/content-page.css">
-        <title>Project Name</title>
+        <title>You Are The Serpent</title>
         <div class="title">
             <h1>Khalil Clay</h1>
             
@@ -32,63 +32,94 @@
     <body>
         <div class="project-content-block">
             <div class="project-content">
-                <!--<div class="project-thumbnail">
-                    <img src="images/AE-Thumbnail.webp" alt="">
-                </div>-->
-                
-                <div class="entry-content">
-
-		
-                    <p><a href="https://www.vrtality.org/resources/vr-experiences/">Animal Excursion</a> is a VR experience worked on by a team of interns I was on with the Seattle Public Library. The VR experience was developed in Unity using C# and aimed to support teen mental health through co-designing. The three-person development team(1 lead and 2 interns) codesigned the experience with teens from the Fayette Library design this experience. This resulted in a VR experience set in a forest environment where the player can pet and feed animals. Development for this project lasted about 3 months (Nov. – Jan.) and my role in this project was to develop the AI and player interactions for the animals. </p>
+                <article>
+            
+                    <div class="content-title">
+                        <h1>You Are The Serpent</h1>
+                    </div>
+                    <p>
+                        <a href="https://whullum.itch.io/serpent">You Are The Serpent</a> is a metroidvania game where you play as a serpent fighting enemies in an underwater facility. 
+                        This game was made with 8 people for Metroidvania Month 19 which lasted for one month. 
+                        This game was developed using Unity with C#. 
+                    </p>
                     
                     
                     
-                    <h2>Animal Behavior</h2>
+                    <h2 class="wp-block-heading">Projectiles</h2>
                     
                     
                     
-                    <p>The animal AI, needed to be able to move in the game world independent of the player, while also moving to the player and stopping when triggered. To do this, I used the Unity Navmesh components for the animal’s pathfinding and scripting for its behaviors. </p>
+                    <p>I worked on the projectile ability for the player. When making this ability, I wanted it to be a simple ranged attack. My idea for this ability was for the player to be able to shoot in the direction they’re looking at. For this, I set a spawn point in front of the player for the projectiles to be launched from and rotated it 90 degrees so the y-axis points in the direction of the mouth. Then when the fire button is pressed the projectile itself is initialized and velocity is to shoot upward locally from the spawn point. After that, a timer is started which prevents firing for a short period. The issue with this is that multiple projectiles could be shot before the timer started. So I decided to use a coroutine instead for its “wait for seconds” method which proved to be a better timer. The issue with my previous timer was that it wasn’t preventing fire for a long enough period in Update. So since coroutines run over time I was better able to prevent firing that way.  </p>
                     
                     
                     
-                    <figure><img src="images/AE-Thumbnail.webp" alt="">
-                       <figcaption> Goat Agent</figcaption>
+                    <figure>
+                        <div class="wp-block-embed__wrapper">
+                            <div class="jetpack-video-wrapper">
+                                <span class="embed-youtube" style="text-align:center; display: block;">
+                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/F0fNdyHMo6s?version=3&amp;rel=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en&amp;autohide=2&amp;wmode=transparent" allowfullscreen="true" style="border: 0px; display: block; margin: 0px; width: 652px; height: 367.104px;" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-popups-to-escape-sandbox" data-ratio="0.5630434782608695" data-width="920" data-height="518">
+                                    </iframe>
+                                </span>
+                            </div>
+                        </div>
                     </figure>
                     
                     
                     
-                    <p>The photo above shows one of the animals that are in the experience, the goat. The goat uses a game object I made that consists of a nav mesh agent component and two colliders for seeing and eating. This allowed the goat to move around its environment. C# scripts are used to activate the animal’s ability to walk.</p>
+                    <h2>Grappling</h2>
                     
                     
                     
-                  
-                    
-                    <p>Animal Wandering: <a href="https://youtube.com/clip/UgkxPO8kF9MRAQro4xR1vEgr-Vq4jc9hS-ZY" rel="nofollow">Video Link</a></p>
-                    
-                    
-                    
-                    <h2>Player Interactions with Animals</h2>
-                    
-                    
-                    
-                    <p>The codesigners felt that being able to interact with animals would add to the mental health aspect of the experience. So the player needed to be able to interact with the animals consistently. This meant making interactions to allow the player to pet animals and feed them.</p>
+                    <p>
+                        I also worked on the grapple which is the player’s first attack ability. 
+                        Since this was a core mechanic in the game some more detailed planning was needed for it. 
+                        The team decided that the grapple should allow the player to latch onto and thrash enemies in order to damage them. Also, since the player is a serpent whose body segments can be manipulated by physics it makes sense for the grappling appendage to also have physics attached to it. 
+                        To start off, I first wanted to make make a line from the player to a target. So using Unity’s line render, I made it so that a line connecting from the player to the target would activate when the target is currently in the designated area for grappling. 
+                        I also made it so that the appendage would stay once the target has left the transparent red grappling area. 
+                    </p>
                     
                     
                     
-                    <figure><img src="images/bear-petting.webp" alt="">
-                        <figcaption>
-                            Petting Bear Agent
-                        </figcaption>
+                    <figure>
+                        <span class="embed-youtube" style="text-align:center; display: block;">
+                            <iframe class="youtube-player" src="https://www.youtube.com/embed/SWtx_uZheM0?version=3&amp;rel=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en&amp;autohide=2&amp;wmode=transparent" allowfullscreen="true" style="border: 0px; display: block; margin: 0px; width: 652px; height: 367.104px;" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-popups-to-escape-sandbox" data-ratio="0.5630434782608695" data-width="920" data-height="518">
+                            </iframe>
+                        </span>
                     </figure>
                     
                     
                     
-                    <p>To give the players the feeling of interacting with animals, the animal agents have eyes and mouth colliders that allow the animal to “locate” and “eat” food. When an animal’s specified favorite food has entered the eye collider, the behavior script takes the location of the food and sets that location as a target for the food. When the food collides with the mouth collider, the animal will then remove that object from the scene because it is considered eaten. This interaction is how the player establishes ownership of the animals which leads to the following behavior described previously. </p>
+                    <p>
+                        The results of this were pleasing but there was a consideration that needed to be made for multiple targets being potentially grappled. 
+                        So to fix this I changed the grappling area to add and remove targets from a C# list based on if they enter or leave the area. This fixed the issue of having multiple enemies being potentially grappled so now I could move on to the thrashing. 
+                        My goal with the thrashing was to allow the player to swing an enemy back and forth similar to how Luigi could slam enemies in Luigi’s Mansion 3. 
+                        Since I’m not an animator and couldn’t make an animation like that game did but what I could do is apply force to a grappled enemy. 
+                        The way applying force works is by using the force method from the rigidbody2D component each enemy has. 
+                        So I chose to apply alternating forces to the grappled target so that it would look like the player was shaking around the target. 
+                        Additionally, rigidbody2D force method is also applied to levers so that the player can pull them to activate doors.
+                    </p>
                     
                     
                     
-                    <p>Petting animals proved to be a challenge. While I could child/connect the animal’s head to the player’s hand, at a certain range there was still an issue of the head not returning to its normal orientation. The project’s lead suggested I use a quaternion for having the rotation change from the rotation tied to the player’s hand to the animal’s original head rotation. This made it so that the animal’s heads wouldn’t remain at an awkward angle after being petted. </p>
+                    <p>
+                        Finally, for the physics of the appendage, I chose to use verlet integration to implement the physics of the appendage. 
+                        I’m not very experienced with physics so I took the time to learn from a tutorial on how to add rope physics using the line renderer in unity. 
+                        The verlet integration essentially adds velocity to specified points in the line renderer. 
+                        Of course, the start and end points don’t need velocity so those are left alone. Constraints are also applied many times to the appendage so that point maintains a set distance from each other. 
+                        This can be performance intensive so the constraints are only applied about 500 times per frame. 
+                        The result is an appendage that looks ropey and not stiff. 
+                    </p>
                     
+                    
+                    
+                    <figure>
+                        <span class="embed-youtube" style="text-align:center; display: block;">
+                            <iframe class="youtube-player" src="https://www.youtube.com/embed/NqfT31Pg6Gc?version=3&amp;rel=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en&amp;autohide=2&amp;wmode=transparent" allowfullscreen="true" style="border: 0px; display: block; margin: 0px; width: 652px; height: 367.104px;" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-popups-to-escape-sandbox" data-ratio="0.5630434782608695" data-width="920" data-height="518">
+                            </iframe>
+                        </span>
+                    </figure>
+            
+                </article>
             </div>
         </div>
     </body>

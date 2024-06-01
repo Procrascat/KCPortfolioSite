@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="styles/all-page-header.css">
         <link rel="stylesheet" href="styles/main-page-body.css">
         <link rel="stylesheet" href="styles/content-page.css">
-        <title>Project Name</title>
+        <title>Overgrowth</title>
         <div class="title">
             <h1>Khalil Clay</h1>
             
@@ -32,63 +32,93 @@
     <body>
         <div class="project-content-block">
             <div class="project-content">
-                <!--<div class="project-thumbnail">
-                    <img src="images/AE-Thumbnail.webp" alt="">
-                </div>-->
+                <article>            
+                        <div class="content-title">
+                            <h1>Overgrowth</h1>
+                        </div>
+                        <p>
+                            <a href="https://whullum.itch.io/overgrowth">Overgrown</a> is a procedurally generated dungeon crawler about a cute little mouse trying to defeat an evil inside a tree. For this project, I worked in a team of 7 for the Global Game Jam 2023 in one week. This game was developed using C# in Unity.
+                        </p>
                 
-                <div class="entry-content">
-
-		
-                    <p><a href="https://www.vrtality.org/resources/vr-experiences/">Animal Excursion</a> is a VR experience worked on by a team of interns I was on with the Seattle Public Library. The VR experience was developed in Unity using C# and aimed to support teen mental health through co-designing. The three-person development team(1 lead and 2 interns) codesigned the experience with teens from the Fayette Library design this experience. This resulted in a VR experience set in a forest environment where the player can pet and feed animals. Development for this project lasted about 3 months (Nov. – Jan.) and my role in this project was to develop the AI and player interactions for the animals. </p>
+                
+                
+                        <figure>
+                            <img src="images/overgrowth-attack.png" alt="">
+                        </figure>
+                
+                
+                        <h2>Player Dodge and Sword Attack</h2>
+                
+                
+                
+                        <p>
+                            I was responsible for the player movement controls, sword attacks, and melee enemies for this project.
+                             When making the player’s dodge, it needed to move from one position to another quickly in order to avoid attacks from enemies. I implemented this by changing the player’s speed to be faster than when the sprint button is pressed.
+                         This made it so the player could get out of danger faster than sprinting.
+                          However, the ability could also be abused to allow the player to speed through dungeon floors easily; so I added a cooldown timer to the dodge to prevent the spamming of the dodge button.
+                        </p>
+                
+                
+            <div class="code-block">
+                <pre >
+                    <code>
+                        <strong>
+                            
+void PlayerDodge()
+{   
+    if (Input.GetAxis("Jump") == 1 &amp;&amp; Time.time &gt; timeLimit)
+    {
+        rb.MovePosition(rb.position + movement * dodgeSpeed 
+        * Time.fixedDeltaTime);
+        
+        timeLimit = Time.time + dodgeCooldown;
+        dodgeInactive = true;
+        Debug.Log(timeLimit);
+    }
+    else if(Time.time &lt; timeLimit &amp;&amp; dodgeInactive)
+    {
+        Debug.Log(Time.time);
+    }
+    else if(dodgeInactive)
+    {
+        dodgeInactive = false;
+    }    
+}
+                            
+                        </strong>
+                    </code>
+                </pre>
+            </div>
                     
                     
                     
-                    <h2>Animal Behavior</h2>
+                    <p>
+                        The player’s attack needed to be implemented in 4 directions since the player only faces 4 different directions. To do this would need to change the position and rotation of the player’s area of attack. So using the direction the player was last facing, I set the position of the area to be directly in front of and parallel to the player’s position. 
+                        So that the sword attack actually feels like a swipe I added another short cooldown timer.
+                    </p>
                     
                     
                     
-                    <p>The animal AI, needed to be able to move in the game world independent of the player, while also moving to the player and stopping when triggered. To do this, I used the Unity Navmesh components for the animal’s pathfinding and scripting for its behaviors. </p>
+                    <h2>Melee Enemies</h2>
                     
                     
                     
-                    <figure><img src="images/AE-Thumbnail.webp" alt="">
-                       <figcaption> Goat Agent</figcaption>
+                    <p>
+                        The enemies also needed to be able to move and attack similar to the player in 4 directions. 
+                        For movement, I tried to give the enemies a similar attack direction system as the player but this wasn’t working as initially hoped since the player’s direction was found through a keyboard input that isn’t present for the enemies. 
+                        So to fix this I instead chose to determine the direction of the enemy using the player’s position. 
+                        This was the enemy would face the player regardless of their location. For movement, I simply set the enemy to move toward the player. 
+                        Another programmer on my team suggested that I add a constraint to the enemy movement so that they only follow the player at a specified range. 
+                        So I added a condition so that the enemy will only move toward the player when they are at a certain distance. 
+                        This made it so that the player isn’t constantly being hunted down by enemies.
+                    </p>
+                    
+                    
+                    
+                    <figure>
+                        <img src="images/overgrowth-enemies.png" alt="">
                     </figure>
-                    
-                    
-                    
-                    <p>The photo above shows one of the animals that are in the experience, the goat. The goat uses a game object I made that consists of a nav mesh agent component and two colliders for seeing and eating. This allowed the goat to move around its environment. C# scripts are used to activate the animal’s ability to walk.</p>
-                    
-                    
-                    
-                  
-                    
-                    <p>Animal Wandering: <a href="https://youtube.com/clip/UgkxPO8kF9MRAQro4xR1vEgr-Vq4jc9hS-ZY" rel="nofollow">Video Link</a></p>
-                    
-                    
-                    
-                    <h2>Player Interactions with Animals</h2>
-                    
-                    
-                    
-                    <p>The codesigners felt that being able to interact with animals would add to the mental health aspect of the experience. So the player needed to be able to interact with the animals consistently. This meant making interactions to allow the player to pet animals and feed them.</p>
-                    
-                    
-                    
-                    <figure><img src="images/bear-petting.webp" alt="">
-                        <figcaption>
-                            Petting Bear Agent
-                        </figcaption>
-                    </figure>
-                    
-                    
-                    
-                    <p>To give the players the feeling of interacting with animals, the animal agents have eyes and mouth colliders that allow the animal to “locate” and “eat” food. When an animal’s specified favorite food has entered the eye collider, the behavior script takes the location of the food and sets that location as a target for the food. When the food collides with the mouth collider, the animal will then remove that object from the scene because it is considered eaten. This interaction is how the player establishes ownership of the animals which leads to the following behavior described previously. </p>
-                    
-                    
-                    
-                    <p>Petting animals proved to be a challenge. While I could child/connect the animal’s head to the player’s hand, at a certain range there was still an issue of the head not returning to its normal orientation. The project’s lead suggested I use a quaternion for having the rotation change from the rotation tied to the player’s hand to the animal’s original head rotation. This made it so that the animal’s heads wouldn’t remain at an awkward angle after being petted. </p>
-                    
+                </article>
             </div>
         </div>
     </body>
