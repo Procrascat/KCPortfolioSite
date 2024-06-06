@@ -7,10 +7,28 @@ body {
     font-size: 20px;
 }
 
+.body-header {
+    background-color: darkgreen;
+    top: 100px;
+    
+    margin: auto;
+    margin-top: 48px;
+    margin-bottom: 0;
+    width: 700px;
+    justify-items: center;
+}
+
+.body-header h2 {
+    top: 200px;
+    
+    margin: 0;
+    margin-top: 50px;
+}
+
 .featured-content-section {
     display: grid;
     background-color: darkgreen;
-    margin-top: 48px;
+    margin-top: 38px;
     margin: auto;
     height: 700px;
     width: 700px;
