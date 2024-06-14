@@ -1,4 +1,15 @@
+p {
+    font-family: 'Bitter', serif;
+}
+
+h2 {
+    font-family: 'Jersey 15', serif;
+    font-weight: 400;
+}
+
 .content-title {
+    font-family: 'Press Start 2P', serif;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -44,7 +55,13 @@ iframe {
     display: flex;
     background-color: #111111;
     width: 800px;
-    
+    height: 550px;
+    margin: 0;
+    box-shadow: 5px solid gray;
+}
+
+pre {
+    margin: 0;
 }
 
 code {

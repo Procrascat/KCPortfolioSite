@@ -5,9 +5,18 @@
     top: 2px;
     left: 20px;
     z-index: 101;
+    
+
 }
 .title h1 {
+    font-family: 'Silkscreen';
+    font-weight: 400;
     margin-top: 0;
+}
+
+button {
+    font-family: 'Silkscreen';
+    font-weight: 400;
 }
 
 

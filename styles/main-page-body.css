@@ -9,6 +9,7 @@ body {
 
 .body-header {
     background-color: darkgreen;
+    
     top: 100px;
     
     margin: auto;
@@ -16,6 +17,11 @@ body {
     margin-bottom: 0;
     width: 700px;
     justify-items: center;
+}
+
+.body-header h2{
+    font-family: 'Jersey 15';
+    font-weight: 400;
 }
 
 .body-header h2 {
@@ -53,10 +59,18 @@ body {
     width: 275px;
     height: 240px;
     cursor: pointer;
-    box-shadow: 5px 5px lightgray;
+    box-shadow: 5px 5px gray;
+    transition: 0.5s;
+}
+
+
+.content-block:hover {
+    opacity: 0.5;
 }
 
 .project-title {
-    
+    font-family: 'Press Start 2P';
+    font-weight: 400;
+    font-size: medium;
     text-align: center;
 }

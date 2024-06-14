@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Page Links-->
         <link rel="stylesheet" href="styles/all-page-header.css">
         <link rel="stylesheet" href="styles/main-page-body.css">
         <link rel="stylesheet" href="styles/content-page.css">
+
+        <!--Font Links-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Jersey+15&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+
         <title>Overgrowth</title>
         <div class="title">
             <h1>Khalil Clay</h1>
@@ -44,6 +52,7 @@
                 
                         <figure>
                             <img src="images/overgrowth-attack.png" alt="">
+                            <figcaption>Player Attack against Ranged Enemy</figcaption>
                         </figure>
                 
                 
@@ -62,8 +71,7 @@
             <div class="code-block">
                 <pre >
                     <code>
-                        <strong>
-                            
+                        <strong>                      
 void PlayerDodge()
 {   
     if (Input.GetAxis("Jump") == 1 &amp;&amp; Time.time &gt; timeLimit)
@@ -83,8 +91,7 @@ void PlayerDodge()
     {
         dodgeInactive = false;
     }    
-}
-                            
+}                         
                         </strong>
                     </code>
                 </pre>
@@ -117,6 +124,7 @@ void PlayerDodge()
                     
                     <figure>
                         <img src="images/overgrowth-enemies.png" alt="">
+                        <figcaption>Melee Enemies</figcaption>
                     </figure>
                 </article>
             </div>
