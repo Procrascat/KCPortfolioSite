@@ -1,0 +1,20 @@
+.contact-content{
+    display: flex;
+    background-color: darkgreen;
+    top: 50%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 180px;
+    width: 450px;
+    border-radius: 50px;
+    box-shadow: 5px 5px gray;
+}
+
+.contact-text {
+    display: block;
+    margin: 20px 10px 15px 15px;
+    height: 200px;
+    width: 450px;
+    border-radius: 50px;
+}

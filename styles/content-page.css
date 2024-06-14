@@ -9,7 +9,7 @@
     margin: auto;
     height: 1fr;
     width: 900px;
-    
+    box-shadow: 5px 5px lightgray;
 }
 
 .project-content {
@@ -29,9 +29,15 @@
 figure img{
     width: 500px;
     border: 2px #111111 solid;
+    box-shadow: 5px 5px gray;
 }
 figcaption {
     font-style: italic;
+    
+}
+
+iframe {
+    box-shadow: 5px 5px gray;
 }
 
 .code-block {

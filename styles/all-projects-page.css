@@ -1,0 +1,37 @@
+.projects-grid {
+    display: grid;
+    
+    justify-items: center;
+}
+
+.project-panel {
+    display: grid;
+    grid-template-columns: auto auto;
+    
+    background-color: darkgreen;
+    box-shadow: 5px 5px gray;
+    height: 250px;
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.project-panel img {
+    padding-right: 0;
+    margin-right: 5px;
+    margin-left: 10px;
+    width: 300px;
+    height: 250px;
+    object-fit: contain;
+    border: 4x;
+}
+
+.project-panel:hover {
+    opacity: 0.5;
+}
+
+.panel-text {
+    margin-left: 10px;
+}
