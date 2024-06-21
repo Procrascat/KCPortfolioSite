@@ -45,3 +45,8 @@ h1 {
 .panel-text {
     margin-left: 10px;
 }
+
+.panel-image{
+    justify-items: right;
+    align-items: right;
+}

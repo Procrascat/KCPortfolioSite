@@ -17,6 +17,7 @@ body {
     margin-bottom: 0;
     width: 700px;
     justify-items: center;
+    box-shadow: 5px 5px gray;
 }
 
 .body-header h2{
@@ -41,7 +42,7 @@ body {
     
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    box-shadow: 5px 0px gray;
+    box-shadow: 5px 5px gray;
 }
 
 .thumbnail img {
@@ -57,7 +58,7 @@ body {
     margin: auto;
     opacity: 1.0;
     width: 275px;
-    height: 240px;
+    height: 260px;
     cursor: pointer;
     box-shadow: 5px 5px gray;
     transition: 0.5s;
