@@ -1,18 +1,12 @@
-head {
-    display: flex;
-}
 .title{
-    display: flex;
+    display: block;
     text-align: left;
     position: fixed;
-    
     top: 2px;
     left: 20px;
     z-index: 101;
     
-    @media screen {
-        
-    }
+
 }
 .title h1 {
     font-family: 'Silkscreen';
