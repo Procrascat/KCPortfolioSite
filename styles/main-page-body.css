@@ -8,6 +8,7 @@ body {
 }
 
 .body-header {
+    display: block;
     background-color: darkgreen;
     
     top: 100px;
@@ -15,7 +16,9 @@ body {
     margin: auto;
     margin-top: 48px;
     margin-bottom: 0;
+    
     width: 700px;
+    
     justify-items: center;
     box-shadow: 5px 5px gray;
 }
@@ -37,19 +40,87 @@ body {
     background-color: darkgreen;
     margin-top: 38px;
     margin: auto;
-    height: 700px;
-    width: 700px;
-    
-    grid-template-columns: 1fr 1fr;
+
     justify-items: center;
     box-shadow: 5px 5px gray;
 }
-
-.thumbnail img {
-    height: 200px;
-    width: 275px;
-    opacity: 1.0;
+.main-body-container {
+    
+    margin-left: 200px;
+    margin-right: 200px;
+    
 }
+@media (min-height: 1501px) {
+    .featured-content-section {
+        height: 2000px;
+        width: 700px;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .content-block {
+        width: 475px;
+        height: 460px;
+        margin-bottom: 28px;
+        
+    }
+
+    .thumbnail {
+        justify-items: center;
+        height: 375px;
+        width: 1fr;
+    }
+
+    .thumbnail img {
+        
+        height: 375px;
+        width: 475px;
+    }
+    .project-title {
+        font-family: 'Press Start 2P';
+        font-weight: 400;
+        font-size: 35px;
+        text-align: center;
+        height: 40px;
+    }
+}
+
+@media (max-height: 1500px){
+    body {
+        height: 900px;
+    }
+    
+    .featured-content-section {
+        height: 900px;
+        width: 700px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+
+    .content-block {
+        width: 275px;
+        height: 260px;
+        
+    }
+
+    .thumbnail img {
+        height: 200px;
+        width: 275px;
+        opacity: 1.0;
+    }
+
+    .project-title {
+        font-family: 'Press Start 2P';
+        font-weight: 400;
+        font-size: medium;
+        text-align: center;
+        height: 20px;
+    }
+
+}
+
+
 .thumbnail {
     opacity: 1.0;
 }
@@ -57,21 +128,15 @@ body {
     background-color: rgba(214, 214, 214,0.45);
     margin: auto;
     opacity: 1.0;
-    width: 275px;
-    height: 260px;
+    grid-template-rows: 1fr 20px;
     cursor: pointer;
     box-shadow: 5px 5px gray;
     transition: 0.5s;
 }
 
 
+
 .content-block:hover {
     opacity: 0.5;
 }
 
-.project-title {
-    font-family: 'Press Start 2P';
-    font-weight: 400;
-    font-size: medium;
-    text-align: center;
-}
