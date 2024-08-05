@@ -23,3 +23,26 @@ p {
     width: 450px;
     border-radius: 50px;
 }
+
+.about-me-text{
+    font-family: 'Bitter';
+    font-weight: 400;
+    padding: 10%;
+}
+
+.about-me-content{
+    display: flex;
+    background-color: gray;
+    top: 50%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 1fr;
+    width: 450px;
+    
+    box-shadow: 5px 5px darkgreen;
+}
+
+.about-me-img {
+    width: 500px;
+}
