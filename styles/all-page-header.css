@@ -95,3 +95,14 @@ button {
 .contact-button:hover {
     background-color: rgb(145, 145, 145);
 }
+
+.threedtest-block {
+    background-color: rgba(214, 214, 214,0.45);
+    
+    justify-self: left;
+    left: 0px;
+    width: 300px;
+    block-size: 400px;
+    box-shadow: 5px 5px gray;
+    
+}
